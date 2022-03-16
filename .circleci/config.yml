@@ -18,6 +18,13 @@ jobs:
       - run:
           name: Install Dependencies
           command: pip install -r requirements.txt
+    deploy:
+    steps:
+      - checkout
+      - run:
+          name: Deploy to Heroku
+          command:
+            git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$fastapi-heroku-cicd.git main
     
 workflows:  
   build-test-and-deploy:    
