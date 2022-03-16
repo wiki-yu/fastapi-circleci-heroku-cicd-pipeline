@@ -18,7 +18,7 @@ jobs:
       - run:
           name: Install Dependencies
           command: pip install -r requirements.txt
-    deploy:
+  deploy:
     steps:
       - checkout
       - run:
@@ -30,6 +30,11 @@ workflows:
   build-test-and-deploy:    
     jobs:      
       - build-and-test:
+          filters:            
+            branches:
+              only:
+                - main
+      - deploy:
           filters:            
             branches:
               only:
