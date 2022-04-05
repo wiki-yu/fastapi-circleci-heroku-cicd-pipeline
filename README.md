@@ -1,6 +1,7 @@
 # FastAPI APP + CircleCI + Heroku Deployment Example
 
-## Build virtual enviroment:
+
+## Setup enviroment:
 
 _For Windows:_
 
@@ -38,6 +39,7 @@ Notes: More details and some screenshot, check doc/CICD_CircleCI.docx
 ## Setup .circleci/config.yml file
 Here you define the CICI pipeline and other details
 
-
+## Check Deployment
+Open APP on Heroku to check if the application is deployed automatically 
 
 
