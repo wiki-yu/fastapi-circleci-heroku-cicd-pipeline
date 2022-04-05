@@ -1,14 +1,31 @@
-# Simple Serverless FastApi Example
+# FastAPI APP + CircleCI + Heroku Deployment Example
+
+## Setup Heroku
+1. Create an account on Heroku
+2. Create new app on Heroku
+3. Check "Heroku git URL" for you app, later it will be used for 
+4. Check API key from "Account Setting", later it will be used for recognizing your Heroku account in CircleCI.
+Notes: Check doc/AI_Deployment_Heroku.doxc for more details.
+
+## Setup CicleCI
+1. Connect CircleCI with Github
+Create a CircleCI account linking your Github
+
+2. Connect CircleCI with Heroku
+(1) Click “Project Setting” for the corresponding Github project. 
+(2) Set up “Environment Variable” to connect CircleCI and Heroku, so that CircleCI knows your Heroku info. (The ENV name should match the one from the config.yml file. The value is obtained from the API key on Heroku.)
+Notes: More details and some screenshot, check doc/CICD_CircleCI.docx
+
+## Setup .circleci/confi.yml file
+Here you define the CICI pipeline and lots of other details
 
 
-A simple serverless [FastAPI](https://fastapi.tiangolo.com/) application using [Mangum](https://pypi.org/project/mangum/) to run on an AWS [Lambda](https://aws.amazon.com/lambda/).
-
-## Complete Walkthrough
-
-### [Simple Serverless FastAPI with AWS Lambda Complete Walkthrough](https://deadbearcode.com/simple-serverless-fastapi-with-aws-lambda/)
 
 
-### [Serverless FastAPI CICD with CircleCi Complete Walkthrough](https://deadbearcode.com/serverless-fastapi-cicd-circleci/)
+
+
+
+
 
 ## Installation
 
